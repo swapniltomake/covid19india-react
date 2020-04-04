@@ -79,13 +79,17 @@ function Patients(props) {
                                   : patient.gender === 'M'
                                   ? 'is-male'
                                   : ''
-                              }`}
+                              } ${props.expand ? '' : 'is-small'}`}
                               onClick={() => {
                                 setModal(true);
                                 setPatient(patient);
                               }}
                             >
-                              <h3>P{patient.patientnumber}</h3>
+                              <h3>
+                                {props.expand
+                                  ? `P${patient.patientnumber}`
+                                  : ''}
+                              </h3>
                             </div>
                           );
                         })}
@@ -126,13 +130,17 @@ function Patients(props) {
                                   : patient.typeoftransmission === 'Imported'
                                   ? 'is-imported'
                                   : ''
-                              }`}
+                              } ${props.expand ? '' : 'is-small'}`}
                               onClick={() => {
                                 setModal(true);
                                 setPatient(patient);
                               }}
                             >
-                              <h3>P{patient.patientnumber}</h3>
+                              <h3>
+                                {props.expand
+                                  ? `P${patient.patientnumber}`
+                                  : ''}
+                              </h3>
                             </div>
                           );
                         })}
@@ -188,13 +196,17 @@ function Patients(props) {
                                   : patient.nationality === 'Canada'
                                   ? 'is-ca'
                                   : ''
-                              }`}
+                              } ${props.expand ? '' : 'is-small'}`}
                               onClick={() => {
                                 setModal(true);
                                 setPatient(patient);
                               }}
                             >
-                              <h3>P{patient.patientnumber}</h3>
+                              <h3>
+                                {props.expand
+                                  ? `P${patient.patientnumber}`
+                                  : ''}
+                              </h3>
                             </div>
                           );
                         })}
